@@ -1,0 +1,52 @@
+{
+  "name": "@medialib/medialib-manga",
+  "version": "0.0.1",
+  "description": "This project give you the resources and conventions for manga media management, compatible with the medialib and addonlib projects",
+  "main": "dist/index.js",
+  "prettier": "prettier-config-leopoldhub",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "compile": "tsc",
+    "lint": "prettier --write . && prettier --check . && eslint",
+    "test": "npm run lint",
+    "build": "npm run test && npm run compile"
+  },
+  "keywords": [
+    "manga",
+    "media",
+    "fetch",
+    "lib",
+    "convention",
+    "addon",
+    "manager",
+    "center"
+  ],
+  "author": {
+    "name": "leopoldhub"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medialib-project/medialib-manga"
+  },
+  "bugs": {
+    "url": "https://github.com/medialib-project/medialib-manga/issues"
+  },
+  "homepage": "https://github.com/medialib-project/medialib-manga#readme",
+  "devDependencies": {
+    "@types/events": "^3.0.0",
+    "@types/json-diff": "^0.9.1",
+    "@types/node": "^20.1.0",
+    "eslint": "^8.39.0",
+    "eslint-config-leopoldhub-base": "^1.0.1",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
+    "prettier-config-leopoldhub": "^1.0.0",
+    "rimraf": "^5.0.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@addonlib/addonlib": "^0.0.1",
+    "@medialib/medialib": "^0.0.1"
+  }
+}
