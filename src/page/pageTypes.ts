@@ -1,7 +1,8 @@
-import { mediaOptions } from '@medialib/medialib';
-import { ReadableStream } from 'stream/web';
+import { basicMediaDetails } from '@medialib/medialib';
+import { downloadImage } from '../downloadImageTypes';
 
-export interface pageOptions extends mediaOptions {
+export type pageDetails = {
   uri: string;
-  download: () => Promise<{ type: string; data: ReadableStream<ArrayBuffer> }>;
-}
+  language: string;
+  download: downloadImage;
+} & basicMediaDetails;

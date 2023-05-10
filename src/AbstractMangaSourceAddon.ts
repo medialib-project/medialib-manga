@@ -1,23 +1,22 @@
-import {
-  AbstractMediaSourceAddon,
-  addonResourcesType,
-  sourceSettingsType,
-} from '@medialib/medialib';
+import { AbstractMediaSourceAddon } from '@medialib/medialib';
 import AbstractMangaSource from './AbstractMangaSource';
+import {
+  mangaSourceAddonDetails,
+  mangaSourceAddonResources,
+} from './mangaSourceAddonTypes';
+import { mangaSourceSettings } from './mangaSourceTypes';
 
-export default abstract class AbstractMangaSourceAddon extends AbstractMediaSourceAddon {
-  protected static type = 'media-source.manga';
-
-  public constructor(
-    instances: addonResourcesType,
-    settings?: sourceSettingsType
-  ) {
-    super(instances, settings);
-  }
-
-  public abstract getSourceClass(): AbstractMangaSource;
-
-  public getSource() {
-    return super.getSource() as AbstractMangaSource;
+export default abstract class AbstractMangaSourceAddon<
+  T extends AbstractMangaSource = AbstractMangaSource,
+  U extends mangaSourceAddonDetails = mangaSourceAddonDetails,
+  V extends mangaSourceAddonResources = mangaSourceAddonResources,
+  W extends mangaSourceSettings = mangaSourceSettings
+> extends AbstractMediaSourceAddon<T, U, V, W> {
+  public constructor(resources: V, details?: U, source?: new () => T) {
+    super(
+      resources,
+      { ...{ type: 'media-source.manga' }, ...details } as U,
+      source
+    );
   }
 }

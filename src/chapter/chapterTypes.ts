@@ -1,7 +1,9 @@
-import { mediaOptions } from '@medialib/medialib';
+import { basicMediaDetails } from '@medialib/medialib';
+import { downloadImage } from '../downloadImageTypes';
 
-export interface chapterOptions extends mediaOptions {
+export type chapterDetails = {
   language: string;
   number: string;
   size: number;
-}
+  downloadCover: downloadImage;
+} & basicMediaDetails;

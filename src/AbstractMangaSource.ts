@@ -1,54 +1,46 @@
-import { AbstractWebSource, sourceSettingsType } from '@medialib/medialib';
+import { AbstractWebSource, optionDefinition } from '@medialib/medialib';
 import {
-  fetchMangaResultType,
-  fetchChapterResultType,
-  fetchPageResultType,
-  mangaSourceOptionsType,
-  chapterSourceOptionsType,
-  pageSourceOptionsType,
+  mangaSourceSettings,
+  mangaSourceFetchOption,
+  mangaSourceFetchResult,
+  chapterSourceFetchOption,
+  chapterSourceFetchResult,
+  pageSourceFetchOption,
+  pageSourceFetchResult,
 } from './mangaSourceTypes';
 import Manga from './manga/Manga';
 import Chapter from './chapter/Chapter';
 
-export default abstract class AbstractMangaSource extends AbstractWebSource {
-  public constructor(settings?: sourceSettingsType) {
-    super(settings);
+export default abstract class AbstractMangaSource<
+  T extends mangaSourceSettings = mangaSourceSettings,
+  U extends mangaSourceFetchOption = mangaSourceFetchOption,
+  V extends mangaSourceFetchResult = mangaSourceFetchResult,
+  W extends chapterSourceFetchOption = chapterSourceFetchOption,
+  X extends chapterSourceFetchResult = chapterSourceFetchResult,
+  Y extends pageSourceFetchOption = pageSourceFetchOption,
+  Z extends pageSourceFetchResult = pageSourceFetchResult
+> extends AbstractWebSource<T, U, V> {
+  public constructor(settingsDefinition?: optionDefinition<T>) {
+    super(settingsDefinition);
   }
 
-  public async fetch(
-    options: mangaSourceOptionsType
-  ): Promise<fetchMangaResultType> {
+  public async fetch(options: U): Promise<V> {
     return this.fetchMangas(options);
   }
 
-  public abstract fetchMangas(
-    options: mangaSourceOptionsType
-  ): Promise<fetchMangaResultType>;
+  public abstract fetchMangas(options: U): Promise<V>;
 
-  public abstract fetchMangaById(id: string): Promise<fetchMangaResultType>;
+  public abstract fetchMangaById(id: string, options: U): Promise<V>;
 
-  public abstract fetchChaptersByManga(
-    manga: Manga,
-    options: chapterSourceOptionsType
-  ): Promise<fetchChapterResultType>;
+  public abstract fetchChaptersByManga(manga: Manga, options: W): Promise<X>;
 
-  public abstract fetchChaptersByMangaId(
-    id: string,
-    options: chapterSourceOptionsType
-  ): Promise<fetchChapterResultType>;
+  public abstract fetchChaptersByMangaId(id: string, options: W): Promise<X>;
 
-  public abstract fetchChapters(
-    options: chapterSourceOptionsType
-  ): Promise<fetchChapterResultType>;
+  public abstract fetchChapters(options: W): Promise<X>;
 
-  public abstract fetchChapterById(id: string): Promise<fetchChapterResultType>;
+  public abstract fetchChapterById(id: string, options: W): Promise<X>;
 
-  public abstract fetchPagesByChapter(
-    chapter: Chapter
-  ): Promise<fetchPageResultType>;
+  public abstract fetchPagesByChapter(chapter: Chapter, options: Y): Promise<Z>;
 
-  public abstract fetchPagesByChapterId(
-    id: string,
-    options: pageSourceOptionsType
-  ): Promise<fetchPageResultType>;
+  public abstract fetchPagesByChapterId(id: string, options: Y): Promise<Z>;
 }

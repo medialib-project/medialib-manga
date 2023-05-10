@@ -1,18 +1,10 @@
 import { AbstractMedia } from '@medialib/medialib';
-import { pageOptions } from './pageTypes';
+import { pageDetails } from './pageTypes';
 
-export default class Page extends AbstractMedia {
-  private uri: string;
-
-  public constructor({ id, title, uri, download }: pageOptions) {
-    super({ id, title });
-    this.uri = uri;
-    this.download = download;
+export default class Page<
+  T extends pageDetails = pageDetails
+> extends AbstractMedia<T> {
+  public constructor(details: T) {
+    super(details);
   }
-
-  public getUri() {
-    return this.uri;
-  }
-
-  public download;
 }

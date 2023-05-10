@@ -1,11 +1,13 @@
-import { mediaOptions } from '@medialib/medialib';
+import { basicMediaDetails } from '@medialib/medialib';
+import { downloadImage } from '../downloadImageTypes';
 
-export interface mangaOptions extends mediaOptions {
+export type mangaDetails = {
   authors: Array<string>;
   description: string;
-  languages: Array<string>;
+  language: string;
   tags: Array<string>;
   genres: Array<string>;
   themes: Array<string>;
   formats: Array<string>;
-}
+  downloadCover: downloadImage;
+} & basicMediaDetails;
