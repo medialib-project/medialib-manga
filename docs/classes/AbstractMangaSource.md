@@ -107,7 +107,7 @@ Source that fetch online medias depending on settings and options
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:23](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L23)
+[src/AbstractMangaSource.ts:23](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L23)
 
 ## Properties
 
@@ -348,7 +348,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:27](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L27)
+[src/AbstractMangaSource.ts:27](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L27)
 
 ___
 
@@ -369,7 +369,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:49](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L49)
+[src/AbstractMangaSource.ts:49](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L49)
 
 ___
 
@@ -389,7 +389,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:47](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L47)
+[src/AbstractMangaSource.ts:47](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L47)
 
 ___
 
@@ -410,7 +410,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:43](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L43)
+[src/AbstractMangaSource.ts:43](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L43)
 
 ___
 
@@ -431,7 +431,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:45](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L45)
+[src/AbstractMangaSource.ts:45](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L45)
 
 ___
 
@@ -452,7 +452,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:37](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L37)
+[src/AbstractMangaSource.ts:37](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L37)
 
 ___
 
@@ -472,7 +472,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:35](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L35)
+[src/AbstractMangaSource.ts:35](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L35)
 
 ___
 
@@ -493,7 +493,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:55](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L55)
+[src/AbstractMangaSource.ts:55](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L55)
 
 ___
 
@@ -514,21 +514,21 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:57](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L57)
+[src/AbstractMangaSource.ts:57](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L57)
 
 ___
 
 ### getFetchChapterOptionsDefinition
 
-▸ `Abstract` **getFetchChapterOptionsDefinition**(): `Promise`<[`optionDefinition`](../modules.md#optiondefinition)<`X`\>\>
+▸ `Abstract` **getFetchChapterOptionsDefinition**(): `Promise`<[`optionDefinition`](../modules.md#optiondefinition)<`W`\>\>
 
 #### Returns
 
-`Promise`<[`optionDefinition`](../modules.md#optiondefinition)<`X`\>\>
+`Promise`<[`optionDefinition`](../modules.md#optiondefinition)<`W`\>\>
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:51](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L51)
+[src/AbstractMangaSource.ts:51](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L51)
 
 ___
 
@@ -542,7 +542,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:39](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L39)
+[src/AbstractMangaSource.ts:39](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L39)
 
 ___
 
@@ -560,7 +560,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:31](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L31)
+[src/AbstractMangaSource.ts:31](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L31)
 
 ___
 
@@ -574,7 +574,7 @@ ___
 
 #### Defined in
 
-[src/AbstractMangaSource.ts:59](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSource.ts#L59)
+[src/AbstractMangaSource.ts:59](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSource.ts#L59)
 
 ___
 

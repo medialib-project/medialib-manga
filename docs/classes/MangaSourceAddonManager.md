@@ -89,7 +89,7 @@ Manage and store addons.
 
 #### Defined in
 
-[src/MangaSourceAddonManager.ts:9](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/MangaSourceAddonManager.ts#L9)
+[src/MangaSourceAddonManager.ts:9](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/MangaSourceAddonManager.ts#L9)
 
 ## Properties
 

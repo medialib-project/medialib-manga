@@ -1,6 +1,6 @@
 {
   "name": "@medialib/medialib-manga",
-  "version": "0.1.2",
+  "version": "0.1.2-rev1",
   "description": "This project give you the resources and conventions for manga media management, compatible with the medialib and addonlib projects",
   "main": "dist/index.js",
   "prettier": "prettier-config-leopoldhub",

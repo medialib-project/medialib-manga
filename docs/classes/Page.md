@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[src/page/Page.ts:7](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/page/Page.ts#L7)
+[src/page/Page.ts:7](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/page/Page.ts#L7)
 
 ## Methods
 

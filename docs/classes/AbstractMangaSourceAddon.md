@@ -98,7 +98,7 @@
 
 #### Defined in
 
-[src/AbstractMangaSourceAddon.ts:15](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/AbstractMangaSourceAddon.ts#L15)
+[src/AbstractMangaSourceAddon.ts:15](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/AbstractMangaSourceAddon.ts#L15)
 
 ## Properties
 

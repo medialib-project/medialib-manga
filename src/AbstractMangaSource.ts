@@ -49,7 +49,7 @@ export default abstract class AbstractMangaSource<
   public abstract fetchChapterById(id: string, options: W): Promise<X>;
 
   public abstract getFetchChapterOptionsDefinition(): Promise<
-    optionDefinition<X>
+    optionDefinition<W>
   >;
 
   public abstract fetchPagesByChapter(chapter: Chapter, options: Y): Promise<Z>;

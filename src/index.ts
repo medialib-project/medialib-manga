@@ -14,6 +14,8 @@ export type * from './mangaSourceTypes';
 export type * from './mangaSourceAddonTypes';
 export type * from './mangaSourceAddonManagerTypes';
 
+export type * from './downloadImageTypes';
+
 export type * from '@medialib/medialib';
 
 export {

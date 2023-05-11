@@ -44,6 +44,7 @@
 - [chapterSourceFetchResult](modules.md#chaptersourcefetchresult)
 - [diff](modules.md#diff)
 - [diffType](modules.md#difftype)
+- [downloadImage](modules.md#downloadimage)
 - [mangaDetails](modules.md#mangadetails)
 - [mangaSourceAddonDetails](modules.md#mangasourceaddondetails)
 - [mangaSourceAddonManagerDetails](modules.md#mangasourceaddonmanagerdetails)
@@ -147,7 +148,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:14](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L14)
+[src/mangaSourceTypes.ts:14](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L14)
 
 ___
 
@@ -163,11 +164,11 @@ ___
 
 ### chapterDetails
 
-Ƭ **chapterDetails**: { `downloadCover`: `downloadImage` ; `language`: `string` ; `number`: `string` ; `size`: `number`  } & [`basicMediaDetails`](modules.md#basicmediadetails)
+Ƭ **chapterDetails**: { `downloadCover`: [`downloadImage`](modules.md#downloadimage) ; `language`: `string` ; `number`: `string` ; `size`: `number`  } & [`basicMediaDetails`](modules.md#basicmediadetails)
 
 #### Defined in
 
-[src/chapter/chapterTypes.ts:4](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/chapter/chapterTypes.ts#L4)
+[src/chapter/chapterTypes.ts:4](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/chapter/chapterTypes.ts#L4)
 
 ___
 
@@ -177,7 +178,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:25](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L25)
+[src/mangaSourceTypes.ts:25](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L25)
 
 ___
 
@@ -193,7 +194,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:27](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L27)
+[src/mangaSourceTypes.ts:27](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L27)
 
 ___
 
@@ -228,13 +229,31 @@ node_modules/@medialib/medialib/dist/utils/diffType.d.ts:5
 
 ___
 
-### mangaDetails
+### downloadImage
 
-Ƭ **mangaDetails**: { `authors`: `string`[] ; `description`: `string` ; `downloadCover`: `downloadImage` ; `formats`: `string`[] ; `genres`: `string`[] ; `language`: `string` ; `tags`: `string`[] ; `themes`: `string`[]  } & [`basicMediaDetails`](modules.md#basicmediadetails)
+Ƭ **downloadImage**: () => `Promise`<{ `data`: `ReadableStream`<`ArrayBuffer`\> ; `type`: `string`  } \| ``null``\>
+
+#### Type declaration
+
+▸ (): `Promise`<{ `data`: `ReadableStream`<`ArrayBuffer`\> ; `type`: `string`  } \| ``null``\>
+
+##### Returns
+
+`Promise`<{ `data`: `ReadableStream`<`ArrayBuffer`\> ; `type`: `string`  } \| ``null``\>
 
 #### Defined in
 
-[src/manga/mangaTypes.ts:4](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/manga/mangaTypes.ts#L4)
+[src/downloadImageTypes.ts:3](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/downloadImageTypes.ts#L3)
+
+___
+
+### mangaDetails
+
+Ƭ **mangaDetails**: { `authors`: `string`[] ; `description`: `string` ; `downloadCover`: [`downloadImage`](modules.md#downloadimage) ; `formats`: `string`[] ; `genres`: `string`[] ; `language`: `string` ; `tags`: `string`[] ; `themes`: `string`[]  } & [`basicMediaDetails`](modules.md#basicmediadetails)
+
+#### Defined in
+
+[src/manga/mangaTypes.ts:4](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/manga/mangaTypes.ts#L4)
 
 ___
 
@@ -244,7 +263,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceAddonTypes.ts:7](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceAddonTypes.ts#L7)
+[src/mangaSourceAddonTypes.ts:7](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceAddonTypes.ts#L7)
 
 ___
 
@@ -254,7 +273,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceAddonManagerTypes.ts:3](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceAddonManagerTypes.ts#L3)
+[src/mangaSourceAddonManagerTypes.ts:3](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceAddonManagerTypes.ts#L3)
 
 ___
 
@@ -264,7 +283,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceAddonTypes.ts:10](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceAddonTypes.ts#L10)
+[src/mangaSourceAddonTypes.ts:10](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceAddonTypes.ts#L10)
 
 ___
 
@@ -274,7 +293,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceAddonTypes.ts:11](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceAddonTypes.ts#L11)
+[src/mangaSourceAddonTypes.ts:11](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceAddonTypes.ts#L11)
 
 ___
 
@@ -284,7 +303,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:20](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L20)
+[src/mangaSourceTypes.ts:20](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L20)
 
 ___
 
@@ -300,7 +319,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:22](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L22)
+[src/mangaSourceTypes.ts:22](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L22)
 
 ___
 
@@ -310,7 +329,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:10](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L10)
+[src/mangaSourceTypes.ts:10](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L10)
 
 ___
 
@@ -441,11 +460,11 @@ ___
 
 ### pageDetails
 
-Ƭ **pageDetails**: { `download`: `downloadImage` ; `language`: `string` ; `uri`: `string`  } & [`basicMediaDetails`](modules.md#basicmediadetails)
+Ƭ **pageDetails**: { `download`: [`downloadImage`](modules.md#downloadimage) ; `language`: `string` ; `uri`: `string`  } & [`basicMediaDetails`](modules.md#basicmediadetails)
 
 #### Defined in
 
-[src/page/pageTypes.ts:4](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/page/pageTypes.ts#L4)
+[src/page/pageTypes.ts:4](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/page/pageTypes.ts#L4)
 
 ___
 
@@ -455,7 +474,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:30](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L30)
+[src/mangaSourceTypes.ts:30](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L30)
 
 ___
 
@@ -471,7 +490,7 @@ ___
 
 #### Defined in
 
-[src/mangaSourceTypes.ts:32](https://github.com/medialib-project/medialib-manga/blob/a882cee/src/mangaSourceTypes.ts#L32)
+[src/mangaSourceTypes.ts:32](https://github.com/medialib-project/medialib-manga/blob/897c5fe/src/mangaSourceTypes.ts#L32)
 
 ___
 
