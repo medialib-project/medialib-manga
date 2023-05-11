@@ -28,9 +28,17 @@ export default abstract class AbstractMangaSource<
     return this.fetchMangas(options);
   }
 
+  public getFetchOptionsDefinition(): Promise<optionDefinition<U>> {
+    return this.getFetchMangaOptionsDefinition();
+  }
+
   public abstract fetchMangas(options: U): Promise<V>;
 
   public abstract fetchMangaById(id: string, options: U): Promise<V>;
+
+  public abstract getFetchMangaOptionsDefinition(): Promise<
+    optionDefinition<U>
+  >;
 
   public abstract fetchChaptersByManga(manga: Manga, options: W): Promise<X>;
 
@@ -40,7 +48,13 @@ export default abstract class AbstractMangaSource<
 
   public abstract fetchChapterById(id: string, options: W): Promise<X>;
 
+  public abstract getFetchChapterOptionsDefinition(): Promise<
+    optionDefinition<X>
+  >;
+
   public abstract fetchPagesByChapter(chapter: Chapter, options: Y): Promise<Z>;
 
   public abstract fetchPagesByChapterId(id: string, options: Y): Promise<Z>;
+
+  public abstract getFetchPageOptionsDefinition(): Promise<optionDefinition<Y>>;
 }

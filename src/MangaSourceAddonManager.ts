@@ -6,8 +6,8 @@ export default class MangaSourceAddonManager<
   T extends mangaSourceAddonManagerDetails = mangaSourceAddonManagerDetails,
   V extends AbstractMangaSourceAddon = AbstractMangaSourceAddon
 > extends MediaSourceAddonManager<T, V> {
-  public constructor(sourcesAddons: Array<V>, details?: T) {
-    super(sourcesAddons, {
+  public constructor(details?: T) {
+    super({
       ...{ type: 'media-source.manga' },
       ...details,
     } as T);
